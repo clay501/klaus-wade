@@ -1,0 +1,343 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Clay Klaus-Wade</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;800&amp;family=Unbounded:wght@900&amp;display=swap">
+<style>
+body{margin:0;background:#f2ede4}
+a{color:#2b2a28}a:hover{color:#56616f}
+a:focus-visible{outline:2px solid #2b2a28;outline-offset:2px}
+.btn-primary:hover{background:#1c1b1a !important}
+.btn-outline:hover{background:#e8e1d5 !important}
+.card-lift{transition:box-shadow 150ms ease-out}
+.card-lift:hover{box-shadow:0 8px 0 -2px #e8e1d5, 0 8px 0 -1px #ddd5c8, 0 16px 0 -4px #d4a5a0 !important}
+@media (prefers-reduced-motion: reduce){.card-lift{transition:none}}
+html{scroll-behavior:smooth}
+@keyframes rise{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+@keyframes drift{from{transform:translateY(-28px)}to{transform:translateY(28px)}}
+@keyframes shift{from{transform:translateX(-18px)}to{transform:translateX(18px)}}
+@media (prefers-reduced-motion: no-preference){
+.intro > *{animation:rise 700ms cubic-bezier(.2,.7,.2,1) both}
+.intro > *:nth-child(2){animation-delay:80ms}
+.intro > *:nth-child(3){animation-delay:160ms}
+.intro > *:nth-child(4){animation-delay:240ms}
+.intro > *:nth-child(5){animation-delay:320ms}
+.intro-photo{animation:rise 900ms 200ms cubic-bezier(.2,.7,.2,1) both}
+@supports (animation-timeline: view()){
+.reveal{animation:rise linear both;animation-timeline:view();animation-range:entry 0% entry 70%}
+.parallax{animation:drift linear both;animation-timeline:view();animation-range:cover 0% cover 100%}
+.parallax-mark{animation:shift linear both;animation-timeline:view();animation-range:cover 0% cover 100%}
+}
+}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+@media (max-width:520px){.hide-sm{display:none}}
+@media (max-width:640px){.about-photo{display:none}.hide-mobile{display:none !important}.hero-photo{max-width:340px}
+.hero{flex-direction:column;flex-wrap:nowrap !important;align-items:stretch !important;gap:20px !important}
+.hero .intro{display:contents !important}
+.hero .intro > *:nth-child(1){order:1}
+.hero .intro > *:nth-child(2){order:2}
+.hero .hero-photo{order:3;flex:none !important;width:100%;align-self:flex-start;margin:8px 0 12px}
+.hero .intro > *:nth-child(n+3){order:4}}
+.lh-stack{position:absolute;top:clamp(56px,7vw,88px);right:0;width:clamp(300px,28vw,440px);overflow:hidden}
+@media (max-width:1180px){.lh-stack{position:relative;top:auto;width:min(440px,78%);margin:clamp(40px,6vw,64px) 0 -24px auto}}
+</style>
+</helmet>
+<div style="width: 100%; min-height: 100vh; display: flex; flex-direction: column; background: #f2ede4; color: #2b2a28; font-family: Inter, system-ui, -apple-system, 'Segoe UI', sans-serif; font-size: 16px; line-height: 26px; overflow-x: hidden">
+<div style="flex: 0 0 auto">
+
+<!-- Header -->
+<header style="border-bottom: 1px solid #ddd5c8">
+<div style="max-width: 1200px; margin: 0 auto; padding: 20px clamp(16px, 4vw, 32px); display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap">
+<div style="display: inline-flex; align-items: center; gap: 16px">
+<div aria-hidden="true" style="display: inline-flex; align-items: center; gap: 5px; font-family: Unbounded, Inter, system-ui, sans-serif; font-weight: 900; font-size: 30px; line-height: 1; color: #8a97a8">
+<span>K</span>
+<span style="display: inline-block; width: 11px; height: 7px; background: #d4a5a0"></span>
+<span>W</span>
+</div>
+<div class="hide-sm" style="font-family: Unbounded, Inter, system-ui, sans-serif; font-weight: 900; font-size: 16px; line-height: 20px; color: #56616f">Clay Klaus-Wade</div>
+</div>
+<a class="btn-primary" href="mailto:clay@klaus-wade.com" style="display: inline-flex; align-items: center; min-height: 44px; box-sizing: border-box; padding: 10px 22px; border-radius: 999px; background: #2b2a28; color: #f2ede4; font-size: 15px; line-height: 20px; font-weight: 800; text-decoration: none">Contact</a>
+</div>
+</header>
+
+<!-- Hero -->
+<section id="top" class="hero" style="max-width: 1200px; margin: 0 auto; padding: clamp(48px, 6vw, 72px) clamp(16px, 4vw, 32px); display: flex; flex-wrap: wrap; align-items: center; gap: clamp(40px, 5vw, 72px)">
+<div class="intro" style="flex: 1 1 420px; min-width: 0; display: flex; flex-direction: column; gap: 20px">
+<div style="font-size: 12px; line-height: 16px; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; color: #56616f">Clay Klaus-Wade · Philadelphia</div>
+<h1 style="margin: 0; font-family: Unbounded, Inter, system-ui, sans-serif; font-weight: 900; font-size: clamp(40px, 6vw, 72px); line-height: 1.05; letter-spacing: -0.02em">Hi, I'm Clay.</h1>
+<p style="margin: 0; font-size: 20px; line-height: 28px; font-weight: 800; color: #56616f">Intern therapist. Grad student at Penn. Founder of Layered Health.</p>
+<p style="margin: 0; font-size: 19px; line-height: 30px; max-width: 34em">I'm an intern therapist at Sunflower Radiance Counseling, I'm finishing my M.S.Ed. in Mental Health Counseling at the University of Pennsylvania, and I'm building Layered Health, a Philadelphia-based psychotherapy practice launching in Summer 2027.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 12px; padding-top: 8px">
+<a class="btn-primary" href="mailto:clay@klaus-wade.com" style="display: inline-flex; align-items: center; gap: 8px; min-height: 48px; box-sizing: border-box; padding: 12px 24px; border-radius: 999px; background: #2b2a28; color: #f2ede4; font-size: 15px; line-height: 20px; font-weight: 800; text-decoration: none">
+<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="m3 7 9 6 9-6"></path></svg>
+Email me</a>
+<a class="btn-outline" href="https://www.linkedin.com/in/clayklaus-wade/" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; min-height: 48px; box-sizing: border-box; padding: 12px 24px; border-radius: 999px; border: 1.5px solid #7f796f; color: #2b2a28; font-size: 15px; line-height: 20px; font-weight: 800; text-decoration: none">LinkedIn</a>
+<a class="btn-outline" href="https://www.psychologytoday.com/profile/1806016" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; min-height: 48px; box-sizing: border-box; padding: 12px 24px; border-radius: 999px; border: 1.5px solid #7f796f; color: #2b2a28; font-size: 15px; line-height: 20px; font-weight: 800; text-decoration: none">Psychology Today</a>
+</div>
+</div>
+<div class="intro-photo hero-photo" style="flex: 0 1 420px; min-width: 260px; padding: 0 24px 24px 0; box-sizing: border-box">
+<img class="parallax" src="/_blob/51d57d8e7ef5354e74b2ba486b19bac7" alt="Clay Klaus-Wade, smiling, in glasses and a navy t-shirt" style="display: block; width: 100%; aspect-ratio: 580 / 618; object-fit: cover; border-radius: 12px; box-shadow: 12px 12px 0 0 #d4a5a0, 24px 24px 0 0 #93a382">
+</div>
+</section>
+
+<!-- About -->
+<section id="about" style="background: #faf7f2; border-top: 1px solid #ddd5c8; border-bottom: 1px solid #ddd5c8">
+<div style="max-width: 1200px; margin: 0 auto; padding: clamp(48px, 6vw, 72px) clamp(16px, 4vw, 32px); display: flex; flex-wrap: wrap; align-items: center; gap: clamp(40px, 5vw, 72px)">
+<div class="about-photo" style="flex: 0 1 380px; min-width: 240px; padding: 0 20px 20px 0; box-sizing: border-box">
+<img class="parallax" src="/_blob/15ea67de53f8e341bc709eb908589e81" alt="Clay outdoors in a Catskills cap, sunglasses and a brown jacket, smiling" style="display: block; width: 100%; aspect-ratio: 403 / 648; object-fit: cover; border-radius: 12px; box-shadow: 20px 20px 0 0 #93a382">
+</div>
+<div style="flex: 1 1 420px; min-width: 0; display: flex; flex-direction: column; gap: 20px; font-size: 17px; line-height: 28px; max-width: 40em">
+<div style="display: flex; flex-direction: column; gap: 16px; padding-bottom: 4px">
+<div style="font-size: 12px; line-height: 16px; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; color: #56616f">About me</div>
+<h2 style="margin: 0; font-family: Unbounded, Inter, system-ui, sans-serif; font-weight: 900; font-size: clamp(28px, 3.4vw, 40px); line-height: 1.15; letter-spacing: -0.015em">Meaningful connections. Impactful change.</h2>
+</div>
+<p style="margin: 0">I'm passionate about making meaningful connections and driving impactful change, and my professional journey spans tech, business development, strategic growth, health insurance sales and education, mental health counseling, public policy, government, community outreach and engagement, communications, and marketing.</p>
+<p style="margin: 0">I hold a bachelor's degree in public affairs and a master's degree in public policy, and I'm currently pursuing a master's degree in mental health counseling at the University of Pennsylvania. My academic and professional experiences have given me rich, diverse, cross-sector perspectives that let me approach my work in unique and innovative ways.</p>
+<p style="margin: 0">I'm an avid reader, theater enthusiast, and nature lover who's on a mission to visit all the U.S. national parks (currently 25% of the way there!). Born and raised in New York, I now proudly call Philadelphia home, where I live with my husband and our cats, Margo and Grayson. In Philly, you'll often find me exploring the city's vibrant culture, serving on the board of directors of Mazzoni Center, cheering at Phillies games, and spending time with my loved ones.</p>
+</div>
+</div>
+</section>
+
+<!-- Now: internship -->
+<section id="now" style="max-width: 1200px; margin: 0 auto; padding: clamp(48px, 6vw, 72px) clamp(16px, 4vw, 32px); display: flex; flex-direction: column; gap: 36px">
+<div class="reveal" style="display: flex; flex-direction: column; gap: 16px; max-width: 760px">
+<div style="font-size: 12px; line-height: 16px; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; color: #56616f">Where I am now</div>
+<h2 style="margin: 0; font-family: Unbounded, Inter, system-ui, sans-serif; font-weight: 900; font-size: clamp(28px, 3.4vw, 40px); line-height: 1.15; letter-spacing: -0.015em">Learning, practicing, building.</h2>
+</div>
+
+<div class="reveal" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 24px">
+<div style="display: flex; flex-direction: column; gap: 12px">
+<div style="width: 56px; height: 20px; border-radius: 999px; background: #8a97a8"></div>
+<h3 style="margin: 0; font-family: Unbounded, Inter, system-ui, sans-serif; font-weight: 900; font-size: 20px; line-height: 28px">Learning</h3>
+<p style="margin: 0">I'm pursuing my M.S.Ed. in Mental Health Counseling at the University of Pennsylvania, graduating in May 2027.</p>
+</div>
+<div style="display: flex; flex-direction: column; gap: 12px">
+<div style="width: 56px; height: 20px; border-radius: 999px; background: #d4a5a0"></div>
+<h3 style="margin: 0; font-family: Unbounded, Inter, system-ui, sans-serif; font-weight: 900; font-size: 20px; line-height: 28px">Practicing</h3>
+<p style="margin: 0">I'm an intern therapist at Sunflower Radiance Counseling, seeing clients virtually throughout Pennsylvania and in person at our office in Glenolden, in Delaware County.</p>
+</div>
+<div style="display: flex; flex-direction: column; gap: 12px">
+<div style="width: 56px; height: 20px; border-radius: 999px; background: #93a382"></div>
+<h3 style="margin: 0; font-family: Unbounded, Inter, system-ui, sans-serif; font-weight: 900; font-size: 20px; line-height: 28px">Building</h3>
+<p style="margin: 0">After I graduate, I'll apply for my LAPC license and, alongside a supervisor, open the doors to Layered Health.</p>
+</div>
+</div>
+
+<!-- Internship feature card -->
+<article class="card-lift reveal" style="background: #faf7f2; border-radius: 12px; box-shadow: 0 8px 0 -2px #e8e1d5, 0 8px 0 -1px #ddd5c8; padding: clamp(24px, 4vw, 48px); display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); gap: clamp(32px, 4vw, 64px)">
+<div style="display: flex; flex-direction: column; gap: 16px">
+<div style="font-size: 12px; line-height: 16px; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; color: #56616f">My internship · August 2026 to present</div>
+<h3 style="margin: 0; font-family: Unbounded, Inter, system-ui, sans-serif; font-weight: 900; font-size: 28px; line-height: 34px; letter-spacing: -0.01em">Sunflower Radiance Counseling</h3>
+<p style="margin: 0; font-size: 17px; line-height: 28px">Sunflower Radiance is an LGBTQ+ and neurodivergent-affirming, identity-informed practice in Glenolden. I see individuals and relationships, virtually and in person.</p>
+<p style="margin: 0; font-size: 17px; line-height: 28px">Our identities intersect and overlap in so many ways, and the culture, history, and society we come from shape how we understand ourselves and the world around us, so all of that belongs in the room, too.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 8px; padding-top: 4px">
+<span style="padding: 6px 14px; border-radius: 999px; background: #93a382; color: #2b2a28; font-size: 14px; line-height: 20px; font-weight: 800">LGBTQ+</span>
+<span style="padding: 6px 14px; border-radius: 999px; background: #93a382; color: #2b2a28; font-size: 14px; line-height: 20px; font-weight: 800">Neurodivergent</span>
+<span style="padding: 6px 14px; border-radius: 999px; background: #93a382; color: #2b2a28; font-size: 14px; line-height: 20px; font-weight: 800">Couples and polycules</span>
+<span style="padding: 6px 14px; border-radius: 999px; background: #93a382; color: #2b2a28; font-size: 14px; line-height: 20px; font-weight: 800">Ethical non-monogamy</span>
+</div>
+<div style="padding-top: 8px">
+<a class="btn-primary" href="https://www.psychologytoday.com/profile/1806016" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; min-height: 48px; box-sizing: border-box; padding: 12px 24px; border-radius: 999px; background: #2b2a28; color: #f2ede4; font-size: 15px; line-height: 20px; font-weight: 800; text-decoration: none">See my Psychology Today profile</a>
+</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 24px">
+<div style="display: flex; flex-direction: column; gap: 8px; padding-bottom: 24px; border-bottom: 1px solid #ddd5c8">
+<div style="font-size: 15px; line-height: 20px; font-weight: 800">Individual therapy</div>
+<p style="margin: 0; color: #2b2a28">Anxiety, depression, trauma, ADHD, OCD, autism, grief and loss, relationship challenges, and identity development.</p>
+</div>
+<div style="display: flex; flex-direction: column; gap: 8px; padding-bottom: 24px; border-bottom: 1px solid #ddd5c8">
+<div style="font-size: 15px; line-height: 20px; font-weight: 800">Relationship therapy</div>
+<p style="margin: 0">Couples and polycules, with ethical non-monogamy treated as a valid way to love, not a problem to solve.</p>
+</div>
+<div style="display: flex; flex-direction: column; gap: 8px">
+<div style="font-size: 15px; line-height: 20px; font-weight: 800">How I work</div>
+<p style="margin: 0">Psychodynamic, person-centered, existential, narrative, and DBT-informed approaches, with object relations and EFT in relationship work.</p>
+</div>
+<p style="margin: 0; font-size: 14px; line-height: 22px; color: #56616f">Supervised by Shannon Kilroy, LPC.</p>
+</div>
+</article>
+</section>
+
+<!-- Layered Health -->
+
+
+<!-- Background -->
+<section id="layered-health" style="background: #e8e1d5; position: relative; overflow: hidden">
+<div class="lh-stack" aria-hidden="true">
+<svg class="parallax-mark" viewBox="0 0 640 300" style="display: block; width: 100%; height: auto; overflow: visible">
+<path d="M58 52 C 200 30, 400 80, 760 40" fill="none" stroke="#2b2a28" stroke-width="56" stroke-linecap="round"></path>
+<path d="M104 118 C 250 96, 440 138, 760 108" fill="none" stroke="#8a97a8" stroke-width="56" stroke-linecap="round"></path>
+<path d="M146 184 C 290 166, 460 202, 760 176" fill="none" stroke="#d4a5a0" stroke-width="56" stroke-linecap="round"></path>
+<path d="M88 250 C 250 228, 440 272, 760 244" fill="none" stroke="#93a382" stroke-width="56" stroke-linecap="round"></path>
+</svg>
+</div>
+<div style="position: relative; max-width: 1200px; margin: 0 auto; padding: clamp(48px, 6vw, 72px) clamp(16px, 4vw, 32px); display: flex; flex-direction: column; gap: 36px">
+<div class="reveal" style="display: flex; flex-direction: column; gap: 16px; max-width: 810px">
+<div style="font-size: 12px; line-height: 16px; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; color: #56616f">What I'm building · Launching Summer 2027</div>
+<h2 style="margin: 0; font-family: Unbounded, Inter, system-ui, sans-serif; font-weight: 900; font-size: clamp(32px, 4.4vw, 56px); line-height: 1.05; letter-spacing: -0.02em">LAYERED HEALTH</h2>
+<p style="margin: 0; font-size: 20px; line-height: 28px; font-weight: 800; color: #56616f">Self-Discovery, Layer by Layer.</p>
+<p style="margin: 0; font-size: 19px; line-height: 30px; width: 100%; max-width: 810px">Layered Health is the private practice I'm opening in Summer 2027. I believe we're all complex, layered people, and that therapy can be a place where we have room to explore those layers, understand ourselves more fully, and heal and grow from what we find there.</p>
+</div>
+
+<div class="reveal" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); gap: 24px">
+<div style="background: #faf7f2; border-radius: 12px; padding: 24px; box-shadow: 0 8px 0 -2px #e8e1d5, 0 8px 0 -1px #ddd5c8; display: flex; flex-direction: column; gap: 12px">
+<div style="font-size: 12px; line-height: 16px; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; color: #56616f">Layer one</div>
+<h3 style="margin: 0; font-family: Unbounded, Inter, system-ui, sans-serif; font-weight: 900; font-size: 20px; line-height: 28px">Explore</h3>
+<p style="margin: 0">We look at what's there, the parts of you that are loud right now and the ones that have been quiet for a long time.</p>
+</div>
+<div style="background: #faf7f2; border-radius: 12px; padding: 24px; margin-left: 0; box-shadow: 0 8px 0 -2px #e8e1d5, 0 8px 0 -1px #ddd5c8, 0 16px 0 -4px #d4a5a0; display: flex; flex-direction: column; gap: 12px">
+<div style="font-size: 12px; line-height: 16px; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; color: #56616f">Layer two</div>
+<h3 style="margin: 0; font-family: Unbounded, Inter, system-ui, sans-serif; font-weight: 900; font-size: 20px; line-height: 28px">Discern</h3>
+<p style="margin: 0">Then we look underneath it, noticing the patterns, where they came from, and what they've been protecting.</p>
+</div>
+<div style="background: #faf7f2; border-radius: 12px; padding: 24px; box-shadow: 0 8px 0 -2px #e8e1d5, 0 8px 0 -1px #ddd5c8; display: flex; flex-direction: column; gap: 12px">
+<div style="font-size: 12px; line-height: 16px; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; color: #56616f">Layer three</div>
+<h3 style="margin: 0; font-family: Unbounded, Inter, system-ui, sans-serif; font-weight: 900; font-size: 20px; line-height: 28px">Integrate</h3>
+<p style="margin: 0">We bring what we find back into your life, so insight becomes something you can actually live with and use.</p>
+</div>
+</div>
+
+<div class="reveal" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); gap: 24px; padding-top: 4px">
+<div style="display: flex; flex-direction: column; gap: 6px">
+<div style="font-size: 15px; line-height: 20px; font-weight: 800">What I'll offer</div>
+<p style="margin: 0">Individual Therapy and Relationship Therapy, including for consensually non-monogamous relationships.</p>
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px">
+<div style="font-size: 15px; line-height: 20px; font-weight: 800">Who it's for</div>
+<p style="margin: 0">LGBTQ+ and neurodivergent people, and members of other historically marginalized communities. Come as you are. All of you.</p>
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px">
+<div style="font-size: 15px; line-height: 20px; font-weight: 800">When</div>
+<p style="margin: 0">Summer 2027, after I graduate from Penn and become an LAPC. Follow along on Instagram at <a href="https://www.instagram.com/layeredhealth/" target="_blank" rel="noopener" style="text-decoration: underline">@layeredhealth</a>.</p>
+</div>
+</div>
+<div class="reveal">
+<a class="btn-primary" href="mailto:clay@klaus-wade.com" style="display: inline-flex; align-items: center; gap: 8px; min-height: 48px; box-sizing: border-box; padding: 12px 24px; border-radius: 999px; background: #2b2a28; color: #f2ede4; font-size: 15px; line-height: 20px; font-weight: 800; text-decoration: none">
+<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="m3 7 9 6 9-6"></path></svg>
+Keep in touch</a>
+</div>
+</div>
+</section><section id="background" class="hide-mobile" style="max-width: 1200px; margin: 0 auto; padding: clamp(48px, 6vw, 72px) clamp(16px, 4vw, 32px); display: flex; flex-direction: column; gap: 36px">
+<div class="reveal" style="display: flex; flex-direction: column; gap: 16px; max-width: 760px">
+<div style="font-size: 12px; line-height: 16px; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; color: #56616f">The rest of my work</div>
+<h2 style="margin: 0; font-family: Unbounded, Inter, system-ui, sans-serif; font-weight: 900; font-size: clamp(28px, 3.4vw, 40px); line-height: 1.15; letter-spacing: -0.015em">Where I've been.</h2>
+<p style="margin: 0; font-size: 19px; line-height: 30px">My path into therapy ran through public policy, patient communities, and health care access. It's a big part of how I think about care, and why I care so much about the systems around it.</p>
+</div>
+
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr)); gap: 24px">
+<article class="card-lift reveal" style="background: #faf7f2; border-radius: 12px; padding: 24px; box-shadow: 0 8px 0 -2px #e8e1d5, 0 8px 0 -1px #ddd5c8; display: flex; flex-direction: column; gap: 12px">
+<div style="font-size: 12px; line-height: 16px; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; color: #56616f">April 2026 to present</div>
+<h3 style="margin: 0; font-family: Unbounded, Inter, system-ui, sans-serif; font-weight: 900; font-size: 20px; line-height: 28px">Doppler</h3>
+<div style="font-size: 15px; line-height: 20px; font-weight: 800; color: #56616f">Sales Development</div>
+<p style="margin: 0">I own an outreach pipeline for enterprise clients, wrote and maintain our multi-motion outbound playbook, and designed a signal-based system for scoring and prioritizing accounts. Doppler protects sensitive digital information, so confidentiality and access control are part of the everyday work.</p>
+</article>
+</div>
+
+<div class="reveal" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr)); gap: clamp(28px, 4vw, 48px)">
+<div style="display: flex; flex-direction: column">
+<div style="font-size: 15px; line-height: 20px; font-weight: 800; padding-bottom: 16px; border-bottom: 1px solid #ddd5c8">Health care and access</div>
+<div style="display: flex; flex-direction: column; gap: 4px; padding: 16px 0; border-bottom: 1px solid #ddd5c8">
+<div style="display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap"><span style="font-weight: 800">KeystoneCare</span><span style="font-size: 14px; color: #56616f">2025 to 2026</span></div>
+<p style="margin: 0; font-size: 15px; line-height: 24px">Account Executive. Managed 150+ referral relationships across the continuum of care, including palliative and hospice, and grew skilled home health referrals 30% in my first 90 days.</p>
+</div>
+<div style="display: flex; flex-direction: column; gap: 4px; padding: 16px 0; border-bottom: 1px solid #ddd5c8">
+<div style="display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap"><span style="font-weight: 800">AccentCare</span><span style="font-size: 14px; color: #56616f">2025</span></div>
+<p style="margin: 0; font-size: 15px; line-height: 24px">Account Executive. Liaison to 300+ referral sources, growing referral volume 133% over baseline.</p>
+</div>
+<div style="display: flex; flex-direction: column; gap: 4px; padding: 16px 0; border-bottom: 1px solid #ddd5c8">
+<div style="display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap"><span style="font-weight: 800">Patina</span><span style="font-size: 14px; color: #56616f">2022 to 2025</span></div>
+<p style="margin: 0; font-size: 15px; line-height: 24px">Manager, Business Growth and Development. Built a bidirectional behavioral health referral pathway in age-friendly primary care for adults 65+.</p>
+</div>
+<div style="display: flex; flex-direction: column; gap: 4px; padding: 16px 0; border-bottom: 1px solid #ddd5c8">
+<div style="display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap"><span style="font-weight: 800">Health Union</span><span style="font-size: 14px; color: #56616f">2021 to 2022</span></div>
+<p style="margin: 0; font-size: 15px; line-height: 24px">Senior Manager, Community Development. Developed screening and escalation protocols for online patient communities and trained staff in trauma-informed response.</p>
+</div>
+<div style="display: flex; flex-direction: column; gap: 4px; padding: 16px 0">
+<div style="display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap"><span style="font-weight: 800">Kolmac Integrated Behavioral Health</span><span style="font-size: 14px; color: #56616f">2025 to 2026</span></div>
+<p style="margin: 0; font-size: 15px; line-height: 24px">Clinical Intern. Facilitated IOP and outpatient groups for substance use and co-occurring disorders.</p>
+</div>
+</div>
+<div style="display: flex; flex-direction: column">
+<div style="font-size: 15px; line-height: 20px; font-weight: 800; padding-bottom: 16px; border-bottom: 1px solid #ddd5c8">Education, policy, and community</div>
+<div style="display: flex; flex-direction: column; gap: 4px; padding: 16px 0; border-bottom: 1px solid #ddd5c8">
+<span style="font-weight: 800">University of Pennsylvania</span>
+<p style="margin: 0; font-size: 15px; line-height: 24px">M.S.Ed. in Mental Health Counseling, expected May 2027</p>
+</div>
+<div style="display: flex; flex-direction: column; gap: 4px; padding: 16px 0; border-bottom: 1px solid #ddd5c8">
+<span style="font-weight: 800">Stony Brook University</span>
+<p style="margin: 0; font-size: 15px; line-height: 24px">M.A. in Public Policy. Modeled the fiscal effects of a federal Public Service Employment program for Dr. Stephanie Kelton, for use by U.S. Senate Budget Committee staff.</p>
+</div>
+<div style="display: flex; flex-direction: column; gap: 4px; padding: 16px 0; border-bottom: 1px solid #ddd5c8">
+<span style="font-weight: 800">SUNY Empire State University</span>
+<p style="margin: 0; font-size: 15px; line-height: 24px">B.A. in Public Affairs</p>
+</div>
+<div style="display: flex; flex-direction: column; gap: 4px; padding: 16px 0">
+<span style="font-weight: 800">Professional affiliations</span>
+<p style="margin: 0; font-size: 15px; line-height: 24px">AASECT, PSPP (Philadelphia Society for Psychoanalytic Psychology), NEI, and NAADC</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Contact CTA -->
+<section id="contact" class="hide-mobile" style="max-width: 1200px; margin: 0 auto; padding: 0 clamp(16px, 4vw, 32px) clamp(48px, 6vw, 72px)">
+<div class="reveal" style="background: #d4a5a0; color: #2b2a28; border-radius: 24px; padding: clamp(32px, 5vw, 56px); box-shadow: 24px 24px 0 0 #93a382; margin-right: 24px; margin-bottom: 24px; display: flex; flex-direction: column; gap: 20px">
+<div style="font-size: 12px; line-height: 16px; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; color: #2b2a28">Get in touch</div>
+<h2 style="margin: 0; font-family: Unbounded, Inter, system-ui, sans-serif; font-weight: 900; font-size: clamp(32px, 4.4vw, 56px); line-height: 1.05; letter-spacing: -0.02em">Let's talk.</h2>
+<p style="margin: 0; font-size: 19px; line-height: 30px; max-width: 34em">Whether you're looking for a therapist, thinking about a referral partnership, or just want to connect, I'd love to hear from you.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 12px; padding-top: 8px">
+<a class="btn-primary" href="mailto:clay@klaus-wade.com" style="display: inline-flex; align-items: center; gap: 8px; min-height: 48px; box-sizing: border-box; padding: 12px 24px; border-radius: 999px; background: #2b2a28; color: #f2ede4; font-size: 15px; line-height: 20px; font-weight: 800; text-decoration: none">
+<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="m3 7 9 6 9-6"></path></svg>
+clay@klaus-wade.com</a>
+<a class="btn-outline" href="https://www.linkedin.com/in/clayklaus-wade/" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; min-height: 48px; box-sizing: border-box; padding: 12px 24px; border-radius: 999px; border: 1.5px solid #2b2a28; color: #2b2a28; font-size: 15px; line-height: 20px; font-weight: 800; text-decoration: none">Connect on LinkedIn</a>
+<a class="btn-outline" href="https://www.psychologytoday.com/profile/1806016" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; min-height: 48px; box-sizing: border-box; padding: 12px 24px; border-radius: 999px; border: 1.5px solid #2b2a28; color: #2b2a28; font-size: 15px; line-height: 20px; font-weight: 800; text-decoration: none">Find me on Psychology Today</a>
+</div>
+</div>
+</section>
+
+</div>
+
+<!-- Footer -->
+<footer style="flex: 1 0 auto; background: #e8e1d5; border-top: 1px solid #ddd5c8">
+<div style="max-width: 1200px; margin: 0 auto; padding: 40px clamp(16px, 4vw, 32px); display: flex; flex-direction: column; gap: 20px">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 24px">
+<div style="display: inline-flex; align-items: center; gap: 16px">
+<div aria-hidden="true" style="display: inline-flex; align-items: center; gap: 5px; font-family: Unbounded, Inter, system-ui, sans-serif; font-weight: 900; font-size: 30px; line-height: 1; color: #8a97a8">
+<span>K</span>
+<span style="display: inline-block; width: 11px; height: 7px; background: #d4a5a0"></span>
+<span>W</span>
+</div>
+<div style="font-family: Unbounded, Inter, system-ui, sans-serif; font-weight: 900; font-size: 16px; line-height: 20px; color: #56616f">Clay Klaus-Wade</div>
+</div>
+<nav aria-label="Contact" style="display: flex; flex-wrap: wrap; gap: 24px; font-size: 15px; line-height: 20px; font-weight: 800">
+<a href="tel:+12158338265" style="text-decoration: underline; padding: 12px 0">(215) 833-8265</a>
+<a href="mailto:clay@klaus-wade.com" style="text-decoration: underline; padding: 12px 0">Email</a>
+<a href="https://www.linkedin.com/in/clayklaus-wade/" target="_blank" rel="noopener" style="text-decoration: underline; padding: 12px 0">LinkedIn</a>
+<a href="https://www.psychologytoday.com/profile/1806016" target="_blank" rel="noopener" style="text-decoration: underline; padding: 12px 0">Psychology Today</a>
+<a href="https://www.instagram.com/layeredhealth/" target="_blank" rel="noopener" style="text-decoration: underline; padding: 12px 0">Instagram</a>
+<a href="#top" style="text-decoration: underline; padding: 12px 0">Back to top</a>
+</nav>
+</div>
+<p style="margin: 0; padding-top: 8px; font-size: 13px; line-height: 20px; font-weight: 800; color: #56616f">Clay is currently supervised by Shannon Kilroy, LPC, owner of Sunflower Radiance Counseling LLC.</p>
+<p style="margin: 0; font-size: 13px; line-height: 20px; color: #56616f">© 2026 Clay Klaus-Wade · Philadelphia, PA</p>
+</div>
+</footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":5340}}'>
+class Component extends DCLogic {
+renderVals() {
+return {};
+}
+}
+</script>
+</body>
+</html>
