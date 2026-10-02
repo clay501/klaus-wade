@@ -2,15 +2,14 @@
 
 ## What's here
 
-- `site/` — the deployable website. Plain HTML and CSS, no build step.
-  - `index.html` — the whole page (one file, styles inline)
-  - `images/clay-headshot.jpg`, `images/clay-catskills.png`, `images/favicon.svg`
+- `index.html` — the whole website (one file, styles inline). Plain HTML and CSS, no build step.
+- `images/` — `clay-headshot.jpg`, `clay-catskills.png`, `favicon.svg`
 - `design-source/` — the Claude Design canvas files, for reference or to rebuild the canvas
   - `Main.dc.html` (desktop/responsive page), `Mobile.dc.html` (phone preview frame), `canvas.json`
 
 ## Deploy
 
-Point Cloudflare Pages, Netlify or Vercel at the `site/` folder (no build command, output directory `site`). Or open `site/index.html` in a browser to preview locally.
+Hosted on Porkbun static hosting, connected to this GitHub repo. Porkbun serves the top level of the repo, so `index.html` and `images/` have to stay at the top level (not in a subfolder). Open `index.html` in a browser to preview locally.
 
 ## Notes
 
