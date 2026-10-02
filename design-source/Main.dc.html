@@ -38,7 +38,7 @@ html{scroll-behavior:smooth}
 }
 @media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
 @media (max-width:520px){.hide-sm{display:none}}
-@media (max-width:640px){.about-photo{display:none}.hide-mobile{display:none !important}.hero-photo{max-width:340px}
+@media (max-width:640px){.site-header{flex-wrap:nowrap !important;padding-top:14px !important;padding-bottom:14px !important}.logo-header{height:35px !important}.logo-footer{height:48px !important}.about-photo{display:none}.hide-mobile{display:none !important}.hero-photo{max-width:340px}
 .hero{flex-direction:column;flex-wrap:nowrap !important;align-items:stretch !important;gap:20px !important}
 .hero .intro{display:contents !important}
 .hero .intro > *:nth-child(1){order:1}
@@ -54,16 +54,11 @@ html{scroll-behavior:smooth}
 
 <!-- Header -->
 <header style="border-bottom: 1px solid #ddd5c8">
-<div style="max-width: 1200px; margin: 0 auto; padding: 20px clamp(16px, 4vw, 32px); display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap">
-<div style="display: inline-flex; align-items: center; gap: 16px">
-<div aria-hidden="true" style="display: inline-flex; align-items: center; gap: 5px; font-family: Unbounded, Inter, system-ui, sans-serif; font-weight: 900; font-size: 30px; line-height: 1; color: #8a97a8">
-<span>K</span>
-<span style="display: inline-block; width: 11px; height: 7px; background: #d4a5a0"></span>
-<span>W</span>
-</div>
-<div class="hide-sm" style="font-family: Unbounded, Inter, system-ui, sans-serif; font-weight: 900; font-size: 16px; line-height: 20px; color: #56616f">Clay Klaus-Wade</div>
-</div>
-<a class="btn-primary" href="mailto:clay@klaus-wade.com" style="display: inline-flex; align-items: center; min-height: 44px; box-sizing: border-box; padding: 10px 22px; border-radius: 999px; background: #2b2a28; color: #f2ede4; font-size: 15px; line-height: 20px; font-weight: 800; text-decoration: none">Contact</a>
+<div class="site-header" style="max-width: 1200px; margin: 0 auto; padding: 20px clamp(16px, 4vw, 32px); display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap">
+<a href="#top" aria-label="Clay Klaus-Wade, back to top" style="display: flex; align-items: center; align-self: center; min-height: 44px; line-height: 0; text-decoration: none">
+<img class="logo-header" src="/_blob/fae18a633f36ab9dfef3b91b3e5ebf1c" alt="K-W Clay Klaus-Wade" style="height: 52px; width: auto; display: block">
+</a>
+<a class="btn-primary" href="mailto:clay@klaus-wade.com" style="display: inline-flex; align-items: center; align-self: center; min-height: 44px; box-sizing: border-box; padding: 10px 22px; border-radius: 999px; background: #2b2a28; color: #f2ede4; font-size: 15px; line-height: 20px; font-weight: 800; text-decoration: none">Contact</a>
 </div>
 </header>
 
@@ -308,14 +303,7 @@ clay@klaus-wade.com</a>
 <footer style="flex: 1 0 auto; background: #e8e1d5; border-top: 1px solid #ddd5c8">
 <div style="max-width: 1200px; margin: 0 auto; padding: 40px clamp(16px, 4vw, 32px); display: flex; flex-direction: column; gap: 20px">
 <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 24px">
-<div style="display: inline-flex; align-items: center; gap: 16px">
-<div aria-hidden="true" style="display: inline-flex; align-items: center; gap: 5px; font-family: Unbounded, Inter, system-ui, sans-serif; font-weight: 900; font-size: 30px; line-height: 1; color: #8a97a8">
-<span>K</span>
-<span style="display: inline-block; width: 11px; height: 7px; background: #d4a5a0"></span>
-<span>W</span>
-</div>
-<div style="font-family: Unbounded, Inter, system-ui, sans-serif; font-weight: 900; font-size: 16px; line-height: 20px; color: #56616f">Clay Klaus-Wade</div>
-</div>
+<img class="logo-footer" src="/_blob/fae18a633f36ab9dfef3b91b3e5ebf1c" alt="K-W Clay Klaus-Wade" style="height: 72px; width: auto; display: block">
 <nav aria-label="Contact" style="display: flex; flex-wrap: wrap; gap: 24px; font-size: 15px; line-height: 20px; font-weight: 800">
 <a href="tel:+12158338265" style="text-decoration: underline; padding: 12px 0">(215) 833-8265</a>
 <a href="mailto:clay@klaus-wade.com" style="text-decoration: underline; padding: 12px 0">Email</a>
@@ -332,7 +320,7 @@ clay@klaus-wade.com</a>
 
 </div>
 </x-dc>
-<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":5340}}'>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":5380}}'>
 class Component extends DCLogic {
 renderVals() {
 return {};

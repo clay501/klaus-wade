@@ -3,7 +3,7 @@
 ## What's here
 
 - `index.html` — the whole website (one file, styles inline). Plain HTML and CSS, no build step.
-- `images/` — `clay-headshot.jpg`, `clay-catskills.png`, `favicon.svg`
+- `images/` — `kw-lockup.png` (K-W logo, header and footer), `clay-headshot.jpg`, `clay-catskills.png`, `favicon.svg`
 - `design-source/` — the Claude Design canvas files, for reference or to rebuild the canvas
   - `Main.dc.html` (desktop/responsive page), `Mobile.dc.html` (phone preview frame), `canvas.json`
 
