@@ -36,7 +36,7 @@ html{scroll-behavior:smooth}
 }
 @media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
 @media (max-width:520px){.hide-sm{display:none}}
-@media (max-width:640px){.site-header{flex-wrap:nowrap !important;padding-top:14px !important;padding-bottom:14px !important}.logo-header{height:35px !important}.logo-footer{height:48px !important}.about-photo{display:none}.hide-mobile{display:none !important}.hero-photo{max-width:340px}
+@media (max-width:640px){.logo-footer{height:48px !important}.about-photo{display:none}.hide-mobile{display:none !important}.hero-photo{max-width:340px}
 .hero{flex-direction:column;flex-wrap:nowrap !important;align-items:stretch !important;gap:20px !important}
 .hero .intro{display:contents !important}
 .hero .intro > *:nth-child(1){order:1}
@@ -45,6 +45,22 @@ html{scroll-behavior:smooth}
 .hero .intro > *:nth-child(n+3){order:4}}
 .lh-stack{position:absolute;top:clamp(56px,7vw,88px);right:0;width:clamp(300px,28vw,440px);overflow:hidden}
 @media (max-width:1180px){.lh-stack{position:relative;top:auto;width:min(440px,78%);margin:clamp(40px,6vw,64px) 0 -24px auto}}
+/* Header, borrowed from layered.health: a sticky vanilla sheet with rounded bottom corners, pill buttons that press into a colored edge */
+.kw-header{position:sticky;top:0;z-index:20;background:#f3e9e6;border-radius:0 0 clamp(28px,4vw,56px) clamp(28px,4vw,56px);box-shadow:0 1px 0 rgba(43,42,40,.12)}
+.kw-header-inner{max-width:1200px;margin:0 auto;padding:20px clamp(16px,4vw,32px);display:flex;align-items:center;justify-content:space-between;gap:24px;transition:padding .25s ease}
+.kw-header.is-scrolled .kw-header-inner{padding-top:12px;padding-bottom:12px}
+.kw-lockup{display:inline-flex;align-items:center;line-height:0;text-decoration:none;flex-shrink:0}
+.kw-lockup img{display:block;height:52px;width:auto}
+.kw-nav{display:flex;align-items:center;gap:24px}
+.kw-btn{position:relative;white-space:nowrap;display:inline-flex;align-items:center;padding:11px 20px;border:2px solid #2b2a28;border-radius:999px;background:#2b2a28;color:#f2ede4 !important;font-size:15px;line-height:20px;font-weight:800;letter-spacing:.02em;text-decoration:none;box-shadow:0 5px 0 0 #d4a5a0;transition:transform .18s ease,box-shadow .18s ease}
+.kw-btn-slate{box-shadow:0 5px 0 0 #8a97a8}
+.kw-btn-sage{box-shadow:0 5px 0 0 #93a382}
+.kw-btn:hover,.kw-btn:focus-visible{background:#1f1e1c;transform:translateY(5px);box-shadow:0 0 0 0 transparent}
+.kw-btn:active{transform:translateY(5px);box-shadow:none}
+@media (max-width:720px){.kw-header-inner{padding-top:16px;padding-bottom:16px;column-gap:14px}.kw-lockup{flex:0 0 104px;width:104px}.kw-lockup img{width:100%;height:auto}.kw-nav{gap:8px}.kw-btn{padding:9px 12px;font-size:13px;box-shadow:0 4px 0 0 #d4a5a0}.kw-btn-slate{box-shadow:0 4px 0 0 #8a97a8}.kw-btn-sage{box-shadow:0 4px 0 0 #93a382}}
+@media (max-width:420px){.kw-header-inner{column-gap:10px}.kw-lockup{flex-basis:84px;width:84px}.kw-nav{gap:6px}.kw-btn{padding:8px 10px;font-size:12px;letter-spacing:0}}
+@media (max-width:350px){.kw-header-inner{column-gap:8px}.kw-lockup{flex-basis:68px;width:68px}.kw-nav{gap:5px}.kw-btn{padding:7px 8px;font-size:11px}}
+@media (prefers-reduced-motion: reduce){.kw-header-inner,.kw-btn{transition:none}}
 </style>
 </head>
 <body>
@@ -52,12 +68,12 @@ html{scroll-behavior:smooth}
 <div style="flex: 0 0 auto">
 
 <!-- Header -->
-<header style="border-bottom: 1px solid #ddd5c8">
-<div class="site-header" style="max-width: 1200px; margin: 0 auto; padding: 20px clamp(16px, 4vw, 32px); display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap">
-<a href="#top" aria-label="Clay Klaus-Wade, back to top" style="display: flex; align-items: center; align-self: center; min-height: 44px; line-height: 0; text-decoration: none">
-<img class="logo-header" src="images/kw-lockup.png" alt="K-W Clay Klaus-Wade" style="height: 52px; width: auto; display: block">
-</a>
-<a class="btn-primary" href="mailto:clay@klaus-wade.com" style="display: inline-flex; align-items: center; align-self: center; min-height: 44px; box-sizing: border-box; padding: 10px 22px; border-radius: 999px; background: #2b2a28; color: #f2ede4; font-size: 15px; line-height: 20px; font-weight: 800; text-decoration: none">Contact</a>
+<header class="kw-header">
+<div class="kw-header-inner">
+<a class="kw-lockup" href="#top" aria-label="Clay Klaus-Wade, back to top"><img src="images/kw-lockup.png" alt="K-W Clay Klaus-Wade"></a>
+<nav class="kw-nav" aria-label="Contact">
+<a class="kw-btn" href="mailto:clay@klaus-wade.com">Contact</a>
+</nav>
 </div>
 </header>
 
@@ -318,5 +334,6 @@ clay@klaus-wade.com</a>
 </footer>
 
 </div>
+<script>(function(){var h=document.querySelector(".kw-header");if(!h)return;var t=false;function u(){h.classList.toggle("is-scrolled",(window.scrollY||window.pageYOffset)>8);t=false}window.addEventListener("scroll",function(){if(!t){t=true;requestAnimationFrame(u)}},{passive:true});u()})();</script>
 </body>
 </html>
