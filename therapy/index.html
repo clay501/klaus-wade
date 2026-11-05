@@ -20,20 +20,6 @@ a:focus-visible{outline:2px solid #2b2a28;outline-offset:2px}
 .card-lift:hover{box-shadow:0 8px 0 -2px #e8e1d5, 0 8px 0 -1px #ddd5c8, 0 16px 0 -4px #d4a5a0 !important}
 @media (prefers-reduced-motion: reduce){.card-lift{transition:none}}
 html{scroll-behavior:smooth}
-@keyframes rise{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
-@keyframes drift{from{transform:translateY(-28px)}to{transform:translateY(28px)}}
-@media (prefers-reduced-motion: no-preference){
-.intro > *{animation:rise 700ms cubic-bezier(.2,.7,.2,1) both}
-.intro > *:nth-child(2){animation-delay:80ms}
-.intro > *:nth-child(3){animation-delay:160ms}
-.intro > *:nth-child(4){animation-delay:240ms}
-.intro > *:nth-child(5){animation-delay:320ms}
-.intro-photo{animation:rise 900ms 200ms cubic-bezier(.2,.7,.2,1) both}
-@supports (animation-timeline: view()){
-.reveal{animation:rise linear both;animation-timeline:view();animation-range:entry 0% entry 70%}
-.parallax{animation:drift linear both;animation-timeline:view();animation-range:cover 0% cover 100%}
-}
-}
 @media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
 @media (max-width:640px){.logo-footer{height:48px !important}.hero-photo{max-width:321px !important}.who-photo{max-width:280px !important;order:2;flex:none !important;width:100%;align-self:flex-start;margin:4px 0 8px}
 .who-row{flex-direction:column;flex-wrap:nowrap !important;align-items:stretch !important;gap:16px !important}
@@ -66,6 +52,8 @@ html{scroll-behavior:smooth}
 @media (max-width:350px){.kw-header-inner{column-gap:8px}.kw-lockup{flex-basis:68px;width:68px}.kw-nav{gap:5px}.kw-btn{padding:7px 8px;font-size:11px}}
 @media (prefers-reduced-motion: reduce){.kw-header,.kw-header-inner,.kw-btn{transition:none}}
 </style>
+<link rel="stylesheet" href="../css/motion.css">
+<script>(function(d){if(!window.matchMedia||matchMedia("(prefers-reduced-motion: reduce)").matches)return;d.classList.add("kw-motion");setTimeout(function(){if(!window.__kwMotionReady)d.classList.remove("kw-motion")},3000)})(document.documentElement);</script>
 </head>
 <body>
 <div style="width: 100%; min-height: 100vh; display: flex; flex-direction: column; background: #f2ede4; color: #2b2a28; font-family: Inter, system-ui, -apple-system, 'Segoe UI', sans-serif; font-size: 16px; line-height: 26px; overflow-x: clip">
@@ -105,8 +93,8 @@ html{scroll-behavior:smooth}
 <div style="max-width: 1200px; margin: 0 auto; padding: clamp(48px, 6vw, 72px) clamp(16px, 4vw, 32px); display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr)); gap: clamp(32px, 4vw, 64px); align-items: center">
 <div class="reveal" style="display: flex; flex-direction: column; gap: 16px">
 <div style="font-size: 12px; line-height: 16px; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; color: #56616f">Why work with me</div>
-<h2 style="margin: 0; font-family: Unbounded, Inter, system-ui, sans-serif; font-weight: 900; font-size: clamp(32px, 4.2vw, 52px); line-height: 1.08; letter-spacing: -0.02em">We are more than one thing.</h2>
-<p style="margin: 0; font-family: Unbounded, Inter, system-ui, sans-serif; font-weight: 900; font-size: clamp(20px, 2.2vw, 28px); line-height: 1.25; color: #56616f">One feeling. One story.<br>We are layered.</p>
+<h2 style="margin: 0; font-family: Unbounded, Inter, system-ui, sans-serif; font-weight: 900; font-size: clamp(32px, 4.2vw, 52px); line-height: 1.08; letter-spacing: -0.02em" data-words-scrub>We are more than one thing.</h2>
+<p style="margin: 0; font-family: Unbounded, Inter, system-ui, sans-serif; font-weight: 900; font-size: clamp(20px, 2.2vw, 28px); line-height: 1.25; color: #56616f" data-words-scrub>One feeling. One story.<br>We are layered.</p>
 </div>
 <div class="reveal" style="display: flex; flex-direction: column; gap: 20px; font-size: 17px; line-height: 28px; max-width: 38em">
 <p style="margin: 0">I approach therapy with the recognition that we're all complex, layered people, and that through therapy we can come to understand ourselves, heal, and grow.</p>
@@ -125,8 +113,8 @@ html{scroll-behavior:smooth}
 <p style="margin: 0; font-size: 17px; line-height: 28px">In particular, I offer affirming, identity-informed care for LGBTQ+ and neurodivergent people, people of color, and members of all historically marginalized communities.</p>
 <p style="margin: 0; font-size: 17px; line-height: 28px">I recognize the many ways that our identities intersect and overlap, and acknowledge that culture, history, and society shape how we understand ourselves and how the world perceives us.</p>
 </div>
-<div class="who-photo" style="flex: 0 1 400px; min-width: 240px; max-width: 400px; box-sizing: border-box">
-<img src="../images/who-i-work-with.png" alt="A young person with bold blue and orange eye makeup, hands framing their face, inside a flowing layered shape" style="display: block; width: 100%; height: auto; aspect-ratio: 782 / 777">
+<div class="who-photo" data-reveal style="flex: 0 1 400px; min-width: 240px; max-width: 400px; box-sizing: border-box">
+<img data-parallax="5" src="../images/who-i-work-with.png" alt="A young person with bold blue and orange eye makeup, hands framing their face, inside a flowing layered shape" style="display: block; width: 100%; height: auto; aspect-ratio: 782 / 777">
 </div>
 </div>
 <div class="reveal" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); gap: 24px">
@@ -150,24 +138,24 @@ html{scroll-behavior:smooth}
 </section>
 
 <!-- My therapeutic process -->
-<section id="process" style="background: #e3e8da; border-top: 1px solid #ddd5c8">
+<section id="process" data-pin style="background: #e3e8da; border-top: 1px solid #ddd5c8">
 <div style="max-width: 1200px; margin: 0 auto; padding: clamp(48px, 6vw, 72px) clamp(16px, 4vw, 32px); display: flex; flex-direction: column; gap: 36px">
 <div class="reveal" style="display: flex; flex-direction: column; gap: 16px">
 <div style="font-size: 12px; line-height: 16px; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; color: #56616f">My therapeutic process</div>
-<h2 style="margin: 0; font-family: Unbounded, Inter, system-ui, sans-serif; font-weight: 900; font-size: clamp(28px, 3.4vw, 40px); line-height: 1.15; letter-spacing: -0.015em">Explore. Discern. Integrate.</h2>
+<h2 style="margin: 0; font-family: Unbounded, Inter, system-ui, sans-serif; font-weight: 900; font-size: clamp(28px, 3.4vw, 40px); line-height: 1.15; letter-spacing: -0.015em" data-pin-title>Explore. Discern. Integrate.</h2>
 </div>
 <div class="reveal" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); gap: 24px">
-<div style="background: #faf7f2; border-radius: 12px; padding: 24px; box-shadow: 0 8px 0 -2px #e8e1d5, 0 8px 0 -1px #ddd5c8; display: flex; flex-direction: column; gap: 12px">
+<div data-pin-step style="background: #faf7f2; border-radius: 12px; padding: 24px; box-shadow: 0 8px 0 -2px #e8e1d5, 0 8px 0 -1px #ddd5c8; display: flex; flex-direction: column; gap: 12px">
 <div style="font-family: Unbounded, Inter, system-ui, sans-serif; font-weight: 900; font-size: 32px; line-height: 1; color: #8a97a8">01</div>
 <h3 style="margin: 0; font-family: Unbounded, Inter, system-ui, sans-serif; font-weight: 900; font-size: 20px; line-height: 28px">Explore</h3>
 <p style="margin: 0">We look at what's there: the feelings, stories and patterns you bring into the room.</p>
 </div>
-<div style="background: #faf7f2; border-radius: 12px; padding: 24px; box-shadow: 0 8px 0 -2px #e8e1d5, 0 8px 0 -1px #ddd5c8, 0 16px 0 -4px #d4a5a0; display: flex; flex-direction: column; gap: 12px">
+<div data-pin-step style="background: #faf7f2; border-radius: 12px; padding: 24px; box-shadow: 0 8px 0 -2px #e8e1d5, 0 8px 0 -1px #ddd5c8, 0 16px 0 -4px #d4a5a0; display: flex; flex-direction: column; gap: 12px">
 <div style="font-family: Unbounded, Inter, system-ui, sans-serif; font-weight: 900; font-size: 32px; line-height: 1; color: #c48d87">02</div>
 <h3 style="margin: 0; font-family: Unbounded, Inter, system-ui, sans-serif; font-weight: 900; font-size: 20px; line-height: 28px">Discern</h3>
 <p style="margin: 0">Then we look underneath it, and notice what each layer is holding and why.</p>
 </div>
-<div style="background: #faf7f2; border-radius: 12px; padding: 24px; box-shadow: 0 8px 0 -2px #e8e1d5, 0 8px 0 -1px #ddd5c8; display: flex; flex-direction: column; gap: 12px">
+<div data-pin-step style="background: #faf7f2; border-radius: 12px; padding: 24px; box-shadow: 0 8px 0 -2px #e8e1d5, 0 8px 0 -1px #ddd5c8; display: flex; flex-direction: column; gap: 12px">
 <div style="font-family: Unbounded, Inter, system-ui, sans-serif; font-weight: 900; font-size: 32px; line-height: 1; color: #7f9170">03</div>
 <h3 style="margin: 0; font-family: Unbounded, Inter, system-ui, sans-serif; font-weight: 900; font-size: 20px; line-height: 28px">Integrate</h3>
 <p style="margin: 0">You bring what you find back into your life, so you can heal and grow.</p>
@@ -296,6 +284,10 @@ Contact me</a>
 </footer>
 
 </div>
+<script src="../js/vendor/gsap.min.js"></script>
+<script src="../js/vendor/ScrollTrigger.min.js"></script>
+<script src="../js/vendor/lenis.min.js"></script>
+<script src="../js/motion.js"></script>
 <script>(function(){var h=document.querySelector(".kw-header");if(!h)return;var t=false;function u(){h.classList.toggle("is-scrolled",(window.scrollY||window.pageYOffset)>8);t=false}window.addEventListener("scroll",function(){if(!t){t=true;requestAnimationFrame(u)}},{passive:true});u()})();</script>
 </body>
 </html>
