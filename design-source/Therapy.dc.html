@@ -16,9 +16,7 @@ a{color:#2b2a28}a:hover{color:#56616f}
 a:focus-visible{outline:2px solid #2b2a28;outline-offset:2px}
 .btn-primary:hover{background:#1c1b1a !important}
 .btn-outline:hover{background:#e8e1d5 !important}
-.hdr-btn:hover{background:#1c1b1a !important;color:#f2ede4 !important}
 .pt-btn:hover{background:#84956f !important;color:#2b2a28 !important}
-.site-bar a:focus-visible{outline:2px solid #2b2a28}
 .card-lift{transition:box-shadow 150ms ease-out}
 .card-lift:hover{box-shadow:0 8px 0 -2px #e8e1d5, 0 8px 0 -1px #ddd5c8, 0 16px 0 -4px #d4a5a0 !important}
 @media (prefers-reduced-motion: reduce){.card-lift{transition:none}}
@@ -38,7 +36,7 @@ html{scroll-behavior:smooth}
 }
 }
 @media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
-@media (max-width:640px){.hdr-nav{gap:12px !important}.hdr-btn{padding:10px 14px !important;font-size:14px !important}.site-header{padding-top:14px !important;padding-bottom:14px !important}.logo-header{height:35px !important}.logo-footer{height:48px !important}.hero-photo{max-width:321px !important}.who-photo{max-width:280px !important;order:2;flex:none !important;width:100%;align-self:flex-start;margin:4px 0 8px}
+@media (max-width:640px){.logo-footer{height:48px !important}.hero-photo{max-width:321px !important}.who-photo{max-width:280px !important;order:2;flex:none !important;width:100%;align-self:flex-start;margin:4px 0 8px}
 .who-row{flex-direction:column;flex-wrap:nowrap !important;align-items:stretch !important;gap:16px !important}
 .who-text{display:contents !important}
 .who-text > *:nth-child(1){order:1}
@@ -48,18 +46,34 @@ html{scroll-behavior:smooth}
 .hero .intro > *:nth-child(1){order:1}
 .hero .hero-photo{order:2;flex:none !important;width:100%;align-self:flex-start;margin:8px 0 12px}
 .hero .intro > *:nth-child(n+2){order:3}}
+/* Header, borrowed from layered.health: a sticky vanilla sheet with rounded bottom corners, pill buttons that press into a colored edge */
+.kw-header{position:sticky;top:0;z-index:20;background:#f3e9e6;border-radius:0 0 clamp(28px,4vw,56px) clamp(28px,4vw,56px);box-shadow:0 1px 0 rgba(43,42,40,.12)}
+.kw-header-inner{max-width:1200px;margin:0 auto;padding:20px clamp(16px,4vw,32px);display:flex;align-items:center;justify-content:space-between;gap:24px;transition:padding .25s ease}
+.kw-header.is-scrolled .kw-header-inner{padding-top:12px;padding-bottom:12px}
+.kw-lockup{display:inline-flex;align-items:center;line-height:0;text-decoration:none;flex-shrink:0}
+.kw-lockup img{display:block;height:52px;width:auto}
+.kw-nav{display:flex;align-items:center;gap:24px}
+.kw-btn{position:relative;white-space:nowrap;display:inline-flex;align-items:center;padding:11px 20px;border:2px solid #2b2a28;border-radius:999px;background:#2b2a28;color:#f2ede4 !important;font-size:15px;line-height:20px;font-weight:800;letter-spacing:.02em;text-decoration:none;box-shadow:0 5px 0 0 #d4a5a0;transition:transform .18s ease,box-shadow .18s ease}
+.kw-btn-slate{box-shadow:0 5px 0 0 #8a97a8}
+.kw-btn-sage{box-shadow:0 5px 0 0 #93a382}
+.kw-btn:hover,.kw-btn:focus-visible{background:#1f1e1c;transform:translateY(5px);box-shadow:0 0 0 0 transparent}
+.kw-btn:active{transform:translateY(5px);box-shadow:none}
+@media (max-width:720px){.kw-header-inner{padding-top:16px;padding-bottom:16px;column-gap:14px}.kw-lockup{flex:0 0 104px;width:104px}.kw-lockup img{width:100%;height:auto}.kw-nav{gap:8px}.kw-btn{padding:9px 12px;font-size:13px;box-shadow:0 4px 0 0 #d4a5a0}.kw-btn-slate{box-shadow:0 4px 0 0 #8a97a8}.kw-btn-sage{box-shadow:0 4px 0 0 #93a382}}
+@media (max-width:420px){.kw-header-inner{column-gap:10px}.kw-lockup{flex-basis:84px;width:84px}.kw-nav{gap:6px}.kw-btn{padding:8px 10px;font-size:12px;letter-spacing:0}}
+@media (max-width:350px){.kw-header-inner{column-gap:8px}.kw-lockup{flex-basis:68px;width:68px}.kw-nav{gap:5px}.kw-btn{padding:7px 8px;font-size:11px}}
+@media (prefers-reduced-motion: reduce){.kw-header-inner,.kw-btn{transition:none}}
 </style>
 </helmet>
 <div style="width: 100%; min-height: 100vh; display: flex; flex-direction: column; background: #f2ede4; color: #2b2a28; font-family: Inter, system-ui, -apple-system, 'Segoe UI', sans-serif; font-size: 16px; line-height: 26px; overflow-x: hidden">
 <div style="flex: 0 0 auto">
 
 <!-- Header (logo only, not linked) -->
-<header class="site-bar" style="background: #d4a5a0">
-<div class="site-header" style="max-width: 1200px; margin: 0 auto; padding: 20px clamp(16px, 4vw, 32px); display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 44px">
-<img class="logo-header" src="/_blob/2d423fab475cd7bc4dfb2caf8a22d3bf" alt="K-W Clay Klaus-Wade" style="height: 52px; width: auto; display: block; flex-shrink: 0">
-<nav class="hdr-nav" aria-label="Contact" style="display: flex; align-items: center; gap: 18px">
-<a class="hdr-btn" href="mailto:clay@sunflowerradiance.com" style="display: inline-flex; align-items: center; min-height: 44px; box-sizing: border-box; padding: 10px 22px; border-radius: 999px; background: #2b2a28; color: #f2ede4; font-size: 15px; line-height: 20px; font-weight: 800; text-decoration: none; white-space: nowrap">Therapy in PA</a>
-<a class="hdr-btn" href="mailto:clay@nekfamilycounseling.org" style="display: inline-flex; align-items: center; min-height: 44px; box-sizing: border-box; padding: 10px 22px; border-radius: 999px; background: #2b2a28; color: #f2ede4; font-size: 15px; line-height: 20px; font-weight: 800; text-decoration: none; white-space: nowrap">Therapy in VT</a>
+<header class="kw-header">
+<div class="kw-header-inner">
+<a class="kw-lockup" href="#top" aria-label="Clay Klaus-Wade, back to top"><img src="/_blob/2d423fab475cd7bc4dfb2caf8a22d3bf" alt="K-W Clay Klaus-Wade"></a>
+<nav class="kw-nav" aria-label="Contact">
+<a class="kw-btn kw-btn-sage" href="mailto:clay@sunflowerradiance.com">Therapy in PA</a>
+<a class="kw-btn kw-btn-slate" href="mailto:clay@nekfamilycounseling.org">Therapy in VT</a>
 </nav>
 </div>
 </header>
