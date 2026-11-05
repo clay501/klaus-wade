@@ -54,6 +54,8 @@ html{scroll-behavior:smooth}
 .kw-header.is-scrolled .kw-header-inner{padding-top:12px;padding-bottom:12px}
 .kw-header{transition:box-shadow .25s ease}
 .kw-header.is-scrolled{box-shadow:0 1px 0 rgba(43,42,40,.12),0 10px 24px -8px rgba(43,42,40,.22)}
+/* the first section runs up behind the header so its rounded corners show that color, not the page */
+.kw-under-header{margin-top:calc(-1 * clamp(28px,4vw,56px));padding-top:clamp(28px,4vw,56px)}
 .kw-lockup{display:inline-flex;align-items:center;line-height:0;text-decoration:none;flex-shrink:0}
 .kw-lockup img{display:block;height:52px;width:auto}
 .kw-nav{display:flex;align-items:center;gap:24px}
@@ -82,7 +84,7 @@ html{scroll-behavior:smooth}
 </header>
 
 <!-- Hero -->
-<div style="background: #e1e5eb">
+<div class="kw-under-header" style="background: #e1e5eb">
 <section id="top" class="hero" style="max-width: 1200px; margin: 0 auto; padding: clamp(48px, 6vw, 72px) clamp(16px, 4vw, 32px); display: flex; flex-wrap: wrap; align-items: center; gap: clamp(40px, 5vw, 72px)">
 <div class="intro" style="flex: 1 1 420px; min-width: 0; display: flex; flex-direction: column; gap: 20px">
 <div style="font-size: 12px; line-height: 16px; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; color: #56616f">Clay Klaus-Wade · Philadelphia</div>
