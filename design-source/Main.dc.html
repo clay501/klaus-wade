@@ -52,6 +52,8 @@ html{scroll-behavior:smooth}
 .kw-header{position:sticky;top:0;z-index:20;background:#f3e9e6;border-radius:0 0 clamp(28px,4vw,56px) clamp(28px,4vw,56px);box-shadow:0 1px 0 rgba(43,42,40,.12)}
 .kw-header-inner{max-width:1200px;margin:0 auto;padding:20px clamp(16px,4vw,32px);display:flex;align-items:center;justify-content:space-between;gap:24px;transition:padding .25s ease}
 .kw-header.is-scrolled .kw-header-inner{padding-top:12px;padding-bottom:12px}
+.kw-header{transition:box-shadow .25s ease}
+.kw-header.is-scrolled{box-shadow:0 1px 0 rgba(43,42,40,.12),0 10px 24px -8px rgba(43,42,40,.22)}
 .kw-lockup{display:inline-flex;align-items:center;line-height:0;text-decoration:none;flex-shrink:0}
 .kw-lockup img{display:block;height:52px;width:auto}
 .kw-nav{display:flex;align-items:center;gap:24px}
@@ -63,10 +65,10 @@ html{scroll-behavior:smooth}
 @media (max-width:720px){.kw-header-inner{padding-top:16px;padding-bottom:16px;column-gap:14px}.kw-lockup{flex:0 0 104px;width:104px}.kw-lockup img{width:100%;height:auto}.kw-nav{gap:8px}.kw-btn{padding:9px 12px;font-size:13px;box-shadow:0 4px 0 0 #d4a5a0}.kw-btn-slate{box-shadow:0 4px 0 0 #8a97a8}.kw-btn-sage{box-shadow:0 4px 0 0 #93a382}}
 @media (max-width:420px){.kw-header-inner{column-gap:10px}.kw-lockup{flex-basis:84px;width:84px}.kw-nav{gap:6px}.kw-btn{padding:8px 10px;font-size:12px;letter-spacing:0}}
 @media (max-width:350px){.kw-header-inner{column-gap:8px}.kw-lockup{flex-basis:68px;width:68px}.kw-nav{gap:5px}.kw-btn{padding:7px 8px;font-size:11px}}
-@media (prefers-reduced-motion: reduce){.kw-header-inner,.kw-btn{transition:none}}
+@media (prefers-reduced-motion: reduce){.kw-header,.kw-header-inner,.kw-btn{transition:none}}
 </style>
 </helmet>
-<div style="width: 100%; min-height: 100vh; display: flex; flex-direction: column; background: #f2ede4; color: #2b2a28; font-family: Inter, system-ui, -apple-system, 'Segoe UI', sans-serif; font-size: 16px; line-height: 26px; overflow-x: hidden">
+<div style="width: 100%; min-height: 100vh; display: flex; flex-direction: column; background: #f2ede4; color: #2b2a28; font-family: Inter, system-ui, -apple-system, 'Segoe UI', sans-serif; font-size: 16px; line-height: 26px; overflow-x: clip">
 <div style="flex: 0 0 auto">
 
 <!-- Header -->
