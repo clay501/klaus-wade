@@ -1,0 +1,57 @@
+/* Motion and micro-interactions for klaus-wade.com, shared by both pages.
+   js/motion.js drives the scroll animations; this file holds the starting
+   states, Lenis's required rules, and the hover/press details. */
+
+/* ---------- Starting states ----------
+   <html> gets .kw-motion from a tiny script in <head> (only when the visitor
+   hasn't asked for reduced motion), so these elements start hidden instead of
+   flashing before js/motion.js animates them in. If the motion script never
+   loads, that head script removes .kw-motion after 3s and everything shows. */
+.kw-motion .kw-header,
+.kw-motion .hero .intro > *,
+.kw-motion .hero-photo,
+.kw-motion .reveal,
+.kw-motion [data-reveal],
+.kw-motion [data-cta] { opacity: 0; }
+
+/* Words split out of a heading or paragraph; only their opacity animates */
+.kw-word { display: inline; }
+
+/* ---------- Lenis (smooth scroll), from lenis.css ---------- */
+html.lenis, html.lenis body { height: auto; }
+html.lenis { scroll-behavior: auto !important; }
+.lenis:not(.lenis-autoToggle).lenis-stopped { overflow: clip; }
+.lenis [data-lenis-prevent] { overscroll-behavior: contain; }
+.lenis.lenis-smooth iframe { pointer-events: none; }
+
+/* ---------- Micro-interactions ---------- */
+/* Buttons lift slightly on hover and press in when clicked */
+.btn-primary, .btn-outline, .pt-btn {
+  transition: transform .25s cubic-bezier(.2,.7,.2,1), background-color .2s ease, color .2s ease;
+}
+.btn-primary svg, .btn-outline svg { transition: transform .25s cubic-bezier(.2,.7,.2,1); }
+.btn-primary:active, .btn-outline:active, .pt-btn:active { transform: translateY(0) scale(.98); transition-duration: .08s; }
+
+/* Cards rise a little and pick up the rose layer underneath */
+.card-lift { transition: transform .35s cubic-bezier(.2,.7,.2,1), box-shadow .35s ease; }
+
+/* Text links: the underline eases away from the text */
+a { text-underline-offset: .16em; transition: color .2s ease, text-underline-offset .2s ease; }
+
+.kw-lockup img { transition: transform .3s cubic-bezier(.2,.7,.2,1); }
+
+/* Hover-only movement, so taps on phones don't leave things stuck mid-lift */
+@media (hover: hover) {
+  .btn-primary:hover, .btn-outline:hover, .pt-btn:hover { transform: translateY(-2px); }
+  .btn-primary:hover svg, .btn-outline:hover svg { transform: scale(1.12); }
+  .card-lift:hover { transform: translateY(-4px); }
+  a:hover { text-underline-offset: .28em; }
+  .kw-lockup:hover img { transform: scale(1.03); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btn-primary, .btn-outline, .pt-btn, .btn-primary svg, .btn-outline svg,
+  .card-lift, a, .kw-lockup img { transition: none; }
+  .btn-primary:hover, .btn-outline:hover, .pt-btn:hover, .btn-primary:active, .btn-outline:active, .pt-btn:active,
+  .btn-primary:hover svg, .btn-outline:hover svg, .card-lift:hover, .kw-lockup:hover img { transform: none; }
+}
