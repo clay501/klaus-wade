@@ -16,10 +16,9 @@ a{color:#2b2a28}a:hover{color:#56616f}
 a:focus-visible{outline:2px solid #2b2a28;outline-offset:2px}
 .btn-primary:hover{background:#1c1b1a !important}
 .btn-outline:hover{background:#e8e1d5 !important}
-.hdr-btn:hover{background:#e0b8b3 !important;color:#2b2a28 !important}
+.hdr-btn:hover{background:#1c1b1a !important;color:#f2ede4 !important}
 .pt-btn:hover{background:#84956f !important;color:#2b2a28 !important}
 .site-bar a:focus-visible{outline:2px solid #2b2a28}
-.site-bar .hdr-btn:hover{background:#c8958f !important}
 .card-lift{transition:box-shadow 150ms ease-out}
 .card-lift:hover{box-shadow:0 8px 0 -2px #e8e1d5, 0 8px 0 -1px #ddd5c8, 0 16px 0 -4px #d4a5a0 !important}
 @media (prefers-reduced-motion: reduce){.card-lift{transition:none}}
@@ -39,7 +38,11 @@ html{scroll-behavior:smooth}
 }
 }
 @media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
-@media (max-width:640px){.hdr-nav{gap:12px !important}.hdr-btn{padding:10px 14px !important;font-size:14px !important}.site-header{padding-top:14px !important;padding-bottom:14px !important}.logo-header{height:35px !important}.logo-footer{height:48px !important}.hero-photo{max-width:321px !important}
+@media (max-width:640px){.hdr-nav{gap:12px !important}.hdr-btn{padding:10px 14px !important;font-size:14px !important}.site-header{padding-top:14px !important;padding-bottom:14px !important}.logo-header{height:35px !important}.logo-footer{height:48px !important}.hero-photo{max-width:321px !important}.who-photo{max-width:280px !important;order:2;flex:none !important;width:100%;align-self:flex-start;margin:4px 0 8px}
+.who-row{flex-direction:column;flex-wrap:nowrap !important;align-items:stretch !important;gap:16px !important}
+.who-text{display:contents !important}
+.who-text > *:nth-child(1){order:1}
+.who-text > *:nth-child(n+2){order:3}
 .hero{flex-direction:column;flex-wrap:nowrap !important;align-items:stretch !important;gap:20px !important}
 .hero .intro{display:contents !important}
 .hero .intro > *:nth-child(1){order:1}
@@ -51,12 +54,12 @@ html{scroll-behavior:smooth}
 <div style="flex: 0 0 auto">
 
 <!-- Header (logo only, not linked) -->
-<header class="site-bar" style="background: #8a97a8">
+<header class="site-bar" style="background: #d4a5a0">
 <div class="site-header" style="max-width: 1200px; margin: 0 auto; padding: 20px clamp(16px, 4vw, 32px); display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 44px">
-<img class="logo-header" src="/_blob/4ee26b74fe501c52fddb8df2c1dec69a" alt="K-W Clay Klaus-Wade" style="height: 52px; width: auto; display: block; flex-shrink: 0">
+<img class="logo-header" src="/_blob/2d423fab475cd7bc4dfb2caf8a22d3bf" alt="K-W Clay Klaus-Wade" style="height: 52px; width: auto; display: block; flex-shrink: 0">
 <nav class="hdr-nav" aria-label="Contact" style="display: flex; align-items: center; gap: 18px">
-<a class="hdr-btn" href="mailto:clay@sunflowerradiance.com" style="display: inline-flex; align-items: center; min-height: 44px; box-sizing: border-box; padding: 10px 22px; border-radius: 999px; background: #d4a5a0; color: #2b2a28; font-size: 15px; line-height: 20px; font-weight: 800; text-decoration: none; white-space: nowrap">Therapy in PA</a>
-<a class="hdr-btn" href="mailto:clay@nekfamilycounseling.org" style="display: inline-flex; align-items: center; min-height: 44px; box-sizing: border-box; padding: 10px 22px; border-radius: 999px; background: #d4a5a0; color: #2b2a28; font-size: 15px; line-height: 20px; font-weight: 800; text-decoration: none; white-space: nowrap">Therapy in VT</a>
+<a class="hdr-btn" href="mailto:clay@sunflowerradiance.com" style="display: inline-flex; align-items: center; min-height: 44px; box-sizing: border-box; padding: 10px 22px; border-radius: 999px; background: #2b2a28; color: #f2ede4; font-size: 15px; line-height: 20px; font-weight: 800; text-decoration: none; white-space: nowrap">Therapy in PA</a>
+<a class="hdr-btn" href="mailto:clay@nekfamilycounseling.org" style="display: inline-flex; align-items: center; min-height: 44px; box-sizing: border-box; padding: 10px 22px; border-radius: 999px; background: #2b2a28; color: #f2ede4; font-size: 15px; line-height: 20px; font-weight: 800; text-decoration: none; white-space: nowrap">Therapy in VT</a>
 </nav>
 </div>
 </header>
@@ -67,12 +70,89 @@ html{scroll-behavior:smooth}
 <h1 style="margin: 0; font-family: Unbounded, Inter, system-ui, sans-serif; font-weight: 900; font-size: clamp(40px, 6vw, 72px); line-height: 1.05; letter-spacing: -0.02em">Hi, I'm Clay.</h1>
 <p style="margin: 0; font-size: 20px; line-height: 28px; font-weight: 800; color: #56616f">Intern Therapist | Grad Student @ UPenn</p>
 <p style="margin: 0; font-size: 19px; line-height: 30px; max-width: 34em">I'm an intern therapist at Sunflower Radiance Counseling in Pennsylvania and NEK Family Counseling in Vermont. I'm pursuing an M.S.Ed. in Mental Health Counseling at the University of Pennsylvania, and hold an M.A. in Public Policy from Stony Brook University.</p>
+<p style="margin: 0; padding-top: 8px; font-size: 20px; line-height: 28px; font-weight: 800; color: #56616f">Interested in working with me?</p>
 <div style="display: flex; flex-wrap: wrap; gap: 12px; padding-top: 8px">
-<a class="pt-btn" href="https://www.psychologytoday.com/profile/1806016" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; min-height: 48px; box-sizing: border-box; padding: 12px 24px; border-radius: 999px; background: #93a382; color: #2b2a28; font-size: 15px; line-height: 20px; font-weight: 800; text-decoration: none">Visit my Psychology Today profile</a>
+<a class="pt-btn" href="https://www.psychologytoday.com/profile/1806016" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; min-height: 48px; box-sizing: border-box; padding: 12px 24px; border-radius: 999px; background: #93a382; color: #2b2a28; font-size: 15px; line-height: 20px; font-weight: 800; text-decoration: none">Contact me</a>
 </div>
 </div>
-<div class="hero-photo" style="flex: 0 1 397px; min-width: 246px; max-width: 397px; box-sizing: border-box; align-self: center">
-<img src="/_blob/632d332a6f4e0091670e5305cb3c052a" alt="Clay Klaus-Wade, smiling, in glasses and a navy t-shirt" style="display: block; width: 100%; aspect-ratio: 580 / 618; object-fit: cover; border-radius: 12px">
+<div class="hero-photo" style="flex: 0 1 421px; min-width: 270px; max-width: 421px; padding: 0 24px 24px 0; box-sizing: border-box; align-self: center">
+<img src="/_blob/51d57d8e7ef5354e74b2ba486b19bac7" alt="Clay Klaus-Wade, smiling, in glasses and a navy t-shirt" style="display: block; width: 100%; aspect-ratio: 580 / 618; object-fit: cover; border-radius: 12px; box-shadow: 12px 12px 0 0 #d4a5a0, 24px 24px 0 0 #93a382">
+</div>
+</section>
+
+<!-- Why work with me -->
+<section id="why" style="background: #faf7f2; border-top: 1px solid #ddd5c8">
+<div style="max-width: 1200px; margin: 0 auto; padding: clamp(48px, 6vw, 72px) clamp(16px, 4vw, 32px); display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr)); gap: clamp(32px, 4vw, 64px); align-items: center">
+<div class="reveal" style="display: flex; flex-direction: column; gap: 16px">
+<div style="font-size: 12px; line-height: 16px; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; color: #56616f">Why work with me</div>
+<h2 style="margin: 0; font-family: Unbounded, Inter, system-ui, sans-serif; font-weight: 900; font-size: clamp(32px, 4.2vw, 52px); line-height: 1.08; letter-spacing: -0.02em">We are more than one thing.</h2>
+<p style="margin: 0; font-family: Unbounded, Inter, system-ui, sans-serif; font-weight: 900; font-size: clamp(20px, 2.2vw, 28px); line-height: 1.25; color: #56616f">One feeling. One story.<br>We are layered.</p>
+</div>
+<div class="reveal" style="display: flex; flex-direction: column; gap: 20px; font-size: 17px; line-height: 28px; max-width: 38em">
+<p style="margin: 0">I approach therapy with the recognition that we're all complex, layered people, and that through therapy we can come to understand ourselves, heal, and grow.</p>
+<p style="margin: 0">I'll meet you with non-judgment and together we'll create a space to collaborate in, exploring your lived experiences and perceptions, discern the meaning within them, and integrate what you learn to live a more fulfilling life.</p>
+</div>
+</div>
+</section>
+
+<!-- Who I work with -->
+<section id="who" style="border-top: 1px solid #ddd5c8">
+<div style="max-width: 1200px; margin: 0 auto; padding: clamp(48px, 6vw, 72px) clamp(16px, 4vw, 32px); display: flex; flex-direction: column; gap: 36px">
+<div class="who-row" style="display: flex; flex-wrap: wrap; align-items: center; gap: clamp(32px, 5vw, 72px)">
+<div class="reveal who-text" style="flex: 1 1 460px; min-width: 0; display: flex; flex-direction: column; gap: 16px; max-width: 760px">
+<div style="font-size: 12px; line-height: 16px; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; color: #56616f">Who I work with</div>
+<h2 style="margin: 0; font-family: Unbounded, Inter, system-ui, sans-serif; font-weight: 900; font-size: clamp(28px, 3.4vw, 40px); line-height: 1.15; letter-spacing: -0.015em">Teens and adults ages 14+ for individual and relationship therapy</h2>
+<p style="margin: 0; font-size: 17px; line-height: 28px">In particular, I offer affirming, identity-informed care for LGBTQ+ and neurodivergent people, people of color, and members of all historically marginalized communities.</p>
+<p style="margin: 0; font-size: 17px; line-height: 28px">I recognize the many ways that our identities intersect and overlap, and acknowledge that culture, history, and society shape how we understand ourselves and how the world perceives us.</p>
+</div>
+<div class="who-photo" style="flex: 0 1 400px; min-width: 240px; max-width: 400px; box-sizing: border-box">
+<img src="/_blob/f59a278d2d6cb71dcf091573760fb2c0" alt="A young person with bold blue and orange eye makeup, hands framing their face, inside a flowing layered shape" style="display: block; width: 100%; height: auto; aspect-ratio: 782 / 777">
+</div>
+</div>
+<div class="reveal" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); gap: 24px">
+<div class="card-lift" style="background: #faf7f2; border-radius: 12px; padding: 24px; box-shadow: 0 8px 0 -2px #e8e1d5, 0 8px 0 -1px #ddd5c8; display: flex; flex-direction: column; gap: 12px">
+<div style="width: 56px; height: 12px; border-radius: 999px; background: #d4a5a0"></div>
+<h3 style="margin: 0; font-family: Unbounded, Inter, system-ui, sans-serif; font-weight: 900; font-size: 20px; line-height: 28px">LGBTQ+ Affirming</h3>
+<p style="margin: 0">Care that recognizes, considers, and celebrates queer sexual and gender identities.</p>
+</div>
+<div class="card-lift" style="background: #faf7f2; border-radius: 12px; padding: 24px; box-shadow: 0 8px 0 -2px #e8e1d5, 0 8px 0 -1px #ddd5c8; display: flex; flex-direction: column; gap: 12px">
+<div style="width: 56px; height: 12px; border-radius: 999px; background: #8a97a8"></div>
+<h3 style="margin: 0; font-family: Unbounded, Inter, system-ui, sans-serif; font-weight: 900; font-size: 20px; line-height: 28px">Neurodivergent Affirming</h3>
+<p style="margin: 0">Care that's inclusive of both diagnosed and not diagnosed people that recognizes that some people's brains process, learn, and behave in a way that's different from what society considers typical.</p>
+</div>
+<div class="card-lift" style="background: #faf7f2; border-radius: 12px; padding: 24px; box-shadow: 0 8px 0 -2px #e8e1d5, 0 8px 0 -1px #ddd5c8; display: flex; flex-direction: column; gap: 12px">
+<div style="width: 56px; height: 12px; border-radius: 999px; background: #93a382"></div>
+<h3 style="margin: 0; font-family: Unbounded, Inter, system-ui, sans-serif; font-weight: 900; font-size: 20px; line-height: 28px">Cultural Humility &amp; Responsiveness</h3>
+<p style="margin: 0">Care that recognizes each person as the expert of their own identity and culture, meets the unfamiliar with curiosity, and aligns with their values.</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- My therapeutic process -->
+<section id="process" style="background: #e8e1d5; border-top: 1px solid #ddd5c8">
+<div style="max-width: 1200px; margin: 0 auto; padding: clamp(48px, 6vw, 72px) clamp(16px, 4vw, 32px); display: flex; flex-direction: column; gap: 36px">
+<div class="reveal" style="display: flex; flex-direction: column; gap: 16px">
+<div style="font-size: 12px; line-height: 16px; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; color: #56616f">My therapeutic process</div>
+<h2 style="margin: 0; font-family: Unbounded, Inter, system-ui, sans-serif; font-weight: 900; font-size: clamp(28px, 3.4vw, 40px); line-height: 1.15; letter-spacing: -0.015em">Explore. Discern. Integrate.</h2>
+</div>
+<div class="reveal" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); gap: 24px">
+<div style="background: #faf7f2; border-radius: 12px; padding: 24px; box-shadow: 0 8px 0 -2px #e8e1d5, 0 8px 0 -1px #ddd5c8; display: flex; flex-direction: column; gap: 12px">
+<div style="font-family: Unbounded, Inter, system-ui, sans-serif; font-weight: 900; font-size: 32px; line-height: 1; color: #8a97a8">01</div>
+<h3 style="margin: 0; font-family: Unbounded, Inter, system-ui, sans-serif; font-weight: 900; font-size: 20px; line-height: 28px">Explore</h3>
+<p style="margin: 0">We look at what's there: the feelings, stories and patterns you bring into the room.</p>
+</div>
+<div style="background: #faf7f2; border-radius: 12px; padding: 24px; box-shadow: 0 8px 0 -2px #e8e1d5, 0 8px 0 -1px #ddd5c8, 0 16px 0 -4px #d4a5a0; display: flex; flex-direction: column; gap: 12px">
+<div style="font-family: Unbounded, Inter, system-ui, sans-serif; font-weight: 900; font-size: 32px; line-height: 1; color: #c48d87">02</div>
+<h3 style="margin: 0; font-family: Unbounded, Inter, system-ui, sans-serif; font-weight: 900; font-size: 20px; line-height: 28px">Discern</h3>
+<p style="margin: 0">Then we look underneath it, and notice what each layer is holding and why.</p>
+</div>
+<div style="background: #faf7f2; border-radius: 12px; padding: 24px; box-shadow: 0 8px 0 -2px #e8e1d5, 0 8px 0 -1px #ddd5c8; display: flex; flex-direction: column; gap: 12px">
+<div style="font-family: Unbounded, Inter, system-ui, sans-serif; font-weight: 900; font-size: 32px; line-height: 1; color: #7f9170">03</div>
+<h3 style="margin: 0; font-family: Unbounded, Inter, system-ui, sans-serif; font-weight: 900; font-size: 20px; line-height: 28px">Integrate</h3>
+<p style="margin: 0">You bring what you find back into your life, so you can heal and grow.</p>
+</div>
+</div>
 </div>
 </section>
 
@@ -197,7 +277,7 @@ Contact me</a>
 
 </div>
 </x-dc>
-<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":2340}}'>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":4000}}'>
 class Component extends DCLogic {
 renderVals() {
 return {};
