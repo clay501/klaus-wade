@@ -50,6 +50,32 @@ html{scroll-behavior:smooth}
 @media (max-width:420px){.kw-header-inner{column-gap:10px}.kw-lockup{flex-basis:84px;width:84px}.kw-nav{gap:6px}.kw-btn{padding:8px 10px;font-size:12px;letter-spacing:0}}
 @media (max-width:350px){.kw-header-inner{column-gap:8px}.kw-lockup{flex-basis:68px;width:68px}.kw-nav{gap:5px}.kw-btn{padding:7px 8px;font-size:11px}}
 @media (prefers-reduced-motion: reduce){.kw-header,.kw-header-inner,.kw-btn{transition:none}}
+/* Header jump links (plain), Contact stays the one pill button */
+.kw-link{font-size:15px;line-height:20px;font-weight:800;letter-spacing:.02em;color:#2b2a28;text-decoration:none;padding:6px 0;background-image:linear-gradient(currentColor,currentColor);background-size:0% 2px;background-repeat:no-repeat;background-position:0 100%;transition:background-size .2s ease}
+.kw-link:hover,.kw-link:focus-visible{color:#2b2a28;background-size:100% 2px}
+@media (max-width:900px){.kw-link-wide{display:none}}
+@media (max-width:720px){.kw-link{display:none}}
+@media (prefers-reduced-motion: reduce){.kw-link{transition:none}}
+section[id]{scroll-margin-top:60px}
+/* Where I've been: career as a track. The rail fills and the K-W marker rides down it as you scroll */
+.kw-track{position:relative;padding-left:44px}
+.kw-rail{position:absolute;left:11px;top:16px;bottom:16px;width:4px;border-radius:4px;background:#ddd5c8}
+.kw-rail-fill{position:absolute;left:0;right:0;top:0;height:0;border-radius:4px;background:linear-gradient(#8a97a8,#d4a5a0 55%,#93a382)}
+.kw-rail-mark{position:absolute;left:50%;top:0;transform:translate(-50%,-50%);padding:3px 6px 2px;border-radius:999px;background:#2b2a28;color:#f2ede4;font:900 10px/14px Unbounded,Inter,system-ui,sans-serif;letter-spacing:.02em;white-space:nowrap;box-shadow:0 3px 0 0 #d4a5a0;will-change:transform}
+.kw-stops{list-style:none;margin:0;padding:0}
+.kw-stop{position:relative;display:flex;flex-direction:column;gap:4px;padding:16px 0;border-bottom:1px solid #ddd5c8}
+.kw-stop:last-child{border-bottom:0}
+.kw-stop::before{content:"";position:absolute;left:-38px;top:22px;width:12px;height:12px;border-radius:50%;background:#f3e3df;box-shadow:0 0 0 2px #ddd5c8;transition:background .3s ease,box-shadow .3s ease}
+.kw-stop.is-passed::before{background:#2b2a28;box-shadow:0 0 0 2px #2b2a28}
+@media (prefers-reduced-motion: reduce){.kw-stop::before{transition:none}}
+/* Footer status badge, like Railway's system-status pill */
+.kw-status{align-self:flex-start;display:inline-flex;align-items:center;gap:10px;padding:8px 14px;border-radius:999px;background:#f2ede4;box-shadow:0 0 0 1px #ddd5c8;color:#2b2a28;font-size:14px;line-height:20px;font-weight:800;text-decoration:none}
+.kw-status:hover,.kw-status:focus-visible{color:#2b2a28;box-shadow:0 0 0 1px #93a382}
+.kw-status-dot{position:relative;width:9px;height:9px;border-radius:50%;background:#5e7a4a}
+.kw-status-dot::after{content:"";position:absolute;inset:-4px;border-radius:50%;border:2px solid #93a382;opacity:0;animation:kw-ping 2.4s ease-out infinite}
+@keyframes kw-ping{0%{transform:scale(.6);opacity:.9}80%,100%{transform:scale(1.5);opacity:0}}
+@media (prefers-reduced-motion: reduce){.kw-status-dot::after{animation:none}}
+.kw-sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 </style>
 <link rel="stylesheet" href="css/motion.css">
 <script>(function(d){if(!window.matchMedia||matchMedia("(prefers-reduced-motion: reduce)").matches)return;d.classList.add("kw-motion");setTimeout(function(){if(!window.__kwMotionReady)d.classList.remove("kw-motion")},3000)})(document.documentElement);</script>
@@ -62,7 +88,11 @@ html{scroll-behavior:smooth}
 <header class="kw-header">
 <div class="kw-header-inner">
 <a class="kw-lockup" href="#top" aria-label="Clay Klaus-Wade, back to top"><img src="images/kw-lockup.png" alt="K-W Clay Klaus-Wade"></a>
-<nav class="kw-nav" aria-label="Contact">
+<nav class="kw-nav" aria-label="Main">
+<a class="kw-link" href="#about">About</a>
+<a class="kw-link" href="#now">Now</a>
+<a class="kw-link" href="#layered-health">Layered Health</a>
+<a class="kw-link kw-link-wide" href="#background">Work</a>
 <a class="kw-btn" href="mailto:clay@klaus-wade.com">Contact</a>
 </nav>
 </div>
@@ -249,25 +279,30 @@ Keep in touch</a>
 <div class="reveal" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr)); gap: clamp(28px, 4vw, 48px)">
 <div style="display: flex; flex-direction: column">
 <div style="font-size: 15px; line-height: 20px; font-weight: 800; padding-bottom: 16px; border-bottom: 1px solid #ddd5c8">Health care and access</div>
-<div style="display: flex; flex-direction: column; gap: 4px; padding: 16px 0; border-bottom: 1px solid #ddd5c8">
+<div class="kw-track" data-track>
+<div class="kw-rail" aria-hidden="true"><div class="kw-rail-fill"></div><span class="kw-rail-mark">K-W</span></div>
+<ol class="kw-stops">
+<li class="kw-stop">
 <div style="display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap"><span style="font-weight: 800">KeystoneCare</span><span style="font-size: 14px; color: #56616f">2025 to 2026</span></div>
 <p style="margin: 0; font-size: 15px; line-height: 24px">Account Executive. Managed 150+ referral relationships across the continuum of care, including palliative and hospice, and grew skilled home health referrals 30% in my first 90 days.</p>
-</div>
-<div style="display: flex; flex-direction: column; gap: 4px; padding: 16px 0; border-bottom: 1px solid #ddd5c8">
+</li>
+<li class="kw-stop">
 <div style="display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap"><span style="font-weight: 800">AccentCare</span><span style="font-size: 14px; color: #56616f">2025</span></div>
 <p style="margin: 0; font-size: 15px; line-height: 24px">Account Executive. Liaison to 300+ referral sources, growing referral volume 133% over baseline.</p>
-</div>
-<div style="display: flex; flex-direction: column; gap: 4px; padding: 16px 0; border-bottom: 1px solid #ddd5c8">
+</li>
+<li class="kw-stop">
 <div style="display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap"><span style="font-weight: 800">Patina</span><span style="font-size: 14px; color: #56616f">2022 to 2025</span></div>
 <p style="margin: 0; font-size: 15px; line-height: 24px">Manager, Business Growth and Development. Built a bidirectional behavioral health referral pathway in age-friendly primary care for adults 65+.</p>
-</div>
-<div style="display: flex; flex-direction: column; gap: 4px; padding: 16px 0; border-bottom: 1px solid #ddd5c8">
+</li>
+<li class="kw-stop">
 <div style="display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap"><span style="font-weight: 800">Health Union</span><span style="font-size: 14px; color: #56616f">2021 to 2022</span></div>
 <p style="margin: 0; font-size: 15px; line-height: 24px">Senior Manager, Community Development. Developed screening and escalation protocols for online patient communities and trained staff in trauma-informed response.</p>
-</div>
-<div style="display: flex; flex-direction: column; gap: 4px; padding: 16px 0">
+</li>
+<li class="kw-stop">
 <div style="display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap"><span style="font-weight: 800">Kolmac Integrated Behavioral Health</span><span style="font-size: 14px; color: #56616f">2025 to 2026</span></div>
 <p style="margin: 0; font-size: 15px; line-height: 24px">Clinical Intern. Facilitated IOP and outpatient groups for substance use and co-occurring disorders.</p>
+</li>
+</ol>
 </div>
 </div>
 <div style="display: flex; flex-direction: column">
@@ -327,6 +362,7 @@ clay@klaus-wade.com</a>
 <a href="#top" style="text-decoration: underline; padding: 12px 0">Back to top</a>
 </nav>
 </div>
+<a class="kw-status" href="https://sunflowerradiance.janeapp.com/#/staff_member/15" target="_blank" rel="noopener"><span class="kw-status-dot" aria-hidden="true"></span>Seeing clients now at Sunflower Radiance<span class="kw-status-arrow" aria-hidden="true">↗</span><span class="kw-sr"> (opens in a new tab)</span></a>
 <p style="margin: 0; padding-top: 8px; font-size: 13px; line-height: 20px; font-weight: 800; color: #56616f">Clay is currently supervised by Shannon Kilroy, LPC, owner of Sunflower Radiance Counseling LLC.</p>
 <p style="margin: 0; font-size: 13px; line-height: 20px; color: #56616f">© 2026 Clay Klaus-Wade · Philadelphia, PA</p>
 </div>
@@ -338,5 +374,8 @@ clay@klaus-wade.com</a>
 <script src="js/vendor/lenis.min.js"></script>
 <script src="js/motion.js"></script>
 <script>(function(){var h=document.querySelector(".kw-header");if(!h)return;var t=false;function u(){h.classList.toggle("is-scrolled",(window.scrollY||window.pageYOffset)>8);t=false}window.addEventListener("scroll",function(){if(!t){t=true;requestAnimationFrame(u)}},{passive:true});u()})();</script>
+<script>(function(){var t=document.querySelector("[data-track]");if(!t)return;var fill=t.querySelector(".kw-rail-fill"),mark=t.querySelector(".kw-rail-mark"),rail=t.querySelector(".kw-rail"),stops=[].slice.call(t.querySelectorAll(".kw-stop")),q=false;
+function draw(){q=false;var r=rail.getBoundingClientRect();if(!r.height)return;var probe=window.innerHeight*0.55;var p=Math.max(0,Math.min(1,(probe-r.top)/r.height));fill.style.height=(p*100).toFixed(2)+"%";mark.style.transform="translate(-50%,calc(-50% + "+(p*r.height).toFixed(1)+"px))";stops.forEach(function(s){s.classList.toggle("is-passed",s.getBoundingClientRect().top+22<=probe)})}
+function ask(){if(!q){q=true;requestAnimationFrame(draw)}}window.addEventListener("scroll",ask,{passive:true});window.addEventListener("resize",ask);draw()})();</script>
 </body>
 </html>

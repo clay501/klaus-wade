@@ -8,7 +8,6 @@
    flashing before js/motion.js animates them in. If the motion script never
    loads, that head script removes .kw-motion after 3s and everything shows. */
 .kw-motion .kw-header,
-.kw-motion .hero .intro > *,
 .kw-motion .hero-photo,
 .kw-motion .reveal,
 .kw-motion [data-reveal],
