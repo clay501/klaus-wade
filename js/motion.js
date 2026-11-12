@@ -60,25 +60,11 @@
 
   var header = document.querySelector('.kw-header');
   var pinSection = document.querySelector('[data-pin]');
-  // ---------- Page load: header slides down, hero text brightens word by word ----------
+  // ---------- Page load: header slides down, hero portrait settles in ----------
   var intro = gsap.timeline({ defaults: { ease: EASE } });
   if (header) intro.fromTo(header, { yPercent: -100, autoAlpha: 0 }, { yPercent: 0, autoAlpha: 1, duration: 0.8, clearProps: 'transform' }, 0);
 
-  var at = 0.15;
-  gsap.utils.toArray('.hero .intro > *').forEach(function (el) {
-    if (isTextBlock(el)) {
-      var words = splitWords(el);
-      gsap.set(el, { autoAlpha: 1 });
-      intro.fromTo(words, { opacity: 0.08 }, {
-        opacity: 1, duration: 0.7, ease: 'power2.out',
-        stagger: { amount: Math.min(0.9, words.length * 0.06) }
-      }, at);
-      at += Math.min(0.45, 0.12 + words.length * 0.03);
-    } else {
-      intro.fromTo(el, { autoAlpha: 0, y: 16 }, { autoAlpha: 1, y: 0, duration: 0.8, clearProps: 'transform' }, at);
-      at += 0.1;
-    }
-  });
+  // Hero copy is readable the moment the page loads: only the header and portrait animate in
   intro.fromTo('.hero-photo', { autoAlpha: 0, scale: 0.96, y: 24 }, { autoAlpha: 1, scale: 1, y: 0, duration: 1.1, clearProps: 'transform' }, 0.25);
 
   var mm = gsap.matchMedia();
