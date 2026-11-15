@@ -54,7 +54,7 @@ html{scroll-behavior:smooth}
 @media (prefers-reduced-motion: reduce){.kw-header,.kw-header-inner,.kw-btn{transition:none}}
 @media (max-width:720px){.kw-btn.kw-btn-hero{padding:12px 22px;font-size:15px;letter-spacing:.02em;box-shadow:0 5px 0 0 #d4a5a0}}
 </style>
-<link rel="stylesheet" href="../css/motion.css">
+<link rel="stylesheet" href="../css/motion.css?v=2">
 <script>(function(d){if(!window.matchMedia||matchMedia("(prefers-reduced-motion: reduce)").matches)return;d.classList.add("kw-motion");setTimeout(function(){if(!window.__kwMotionReady)d.classList.remove("kw-motion")},3000)})(document.documentElement);</script>
 </head>
 <body>
@@ -292,7 +292,7 @@ Contact me</a>
 <script src="../js/vendor/gsap.min.js"></script>
 <script src="../js/vendor/ScrollTrigger.min.js"></script>
 <script src="../js/vendor/lenis.min.js"></script>
-<script src="../js/motion.js"></script>
+<script src="../js/motion.js?v=2"></script>
 <script>(function(){var h=document.querySelector(".kw-header");if(!h)return;var t=false;function u(){h.classList.toggle("is-scrolled",(window.scrollY||window.pageYOffset)>8);t=false}window.addEventListener("scroll",function(){if(!t){t=true;requestAnimationFrame(u)}},{passive:true});u()})();</script>
 </body>
 </html>
